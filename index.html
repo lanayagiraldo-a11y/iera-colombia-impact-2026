@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -32,9 +32,23 @@
     @media(max-width:430px){
       .country{display:none}.language-switch button{padding:6px 8px}.hero h1{font-size:42px}.meta{grid-template-columns:1fr}.kpis{grid-template-columns:1fr}.summary{box-shadow:6px 6px 0 var(--cyan)}.summary p{font-size:19px}.month-hero h1{font-size:44px}.gallery-close h3{font-size:34px}
     }
+    /* Reading and navigation */
+    :focus-visible{outline:3px solid #006a87;outline-offset:5px}
+    .skip-link{position:fixed;top:8px;left:16px;z-index:20;padding:12px 18px;background:#fff;color:#111;transform:translateY(-160%)}.skip-link:focus{transform:translateY(0)}
+    .mobile-navigation{display:none}.tab,.language-switch button{min-height:44px}.tab{letter-spacing:.03em;font-size:12px;text-transform:none}.tabs .wrap{gap:6px}.lang-label{display:none}
+    .panel{scroll-margin-top:88px}.panel:focus{outline:none}.hero{padding:64px 0}.hero-grid{gap:42px}.hero h1{font-size:clamp(42px,5.8vw,70px);line-height:1.04}.lede{line-height:1.7}.summary p{font-size:23px!important}.summary{box-shadow:8px 8px 0 var(--cyan)}
+    .kpi{min-width:0}.kpi strong{font-size:clamp(38px,4.8vw,60px)}.kpi b{letter-spacing:.07em;font-size:12px}.kpi p{color:#595853}.story small,.gallery-caption span,.year-phase small,.story-chapter span{color:#b41060}.story h3{line-height:1.17}.story summary{padding:10px 0;font-size:14px}.story img{object-fit:contain;background:#f0eee8}.story-link{display:inline-flex;align-items:center;gap:12px;margin-top:auto;padding:14px 0 4px;color:var(--ink);font-size:14px;font-weight:800;text-underline-offset:5px}.story-link:after{content:'→'}
+    .table-wrap{scrollbar-width:auto}.table-wrap:focus-visible{outline-offset:3px}caption{text-align:left;font-size:16px;font-weight:800;padding:8px 12px 16px}.table-hint{margin:0 0 8px;font-size:12px;color:#595853}th[scope="row"]{text-transform:none;letter-spacing:0;font-size:14px;font-weight:600}tbody tr:hover{background:#f7f6f1}
+    .video-shell{max-width:720px}.video-shell video{max-height:460px;max-height:min(60svh,460px)}.video-shell p{color:#c7c7c7}.gallery-caption p,.story-chapter p{color:#595853}.gallery-card:hover{transform:none}.gallery-card img{object-fit:contain;background:#e9e7e1}.trend-bars:before{content:attr(aria-label);font-size:18px;font-weight:800;margin-bottom:8px}.trend-fill{background:#007f9f}.trend-row{font-size:14px}.trend-track{height:14px}
+    @media(max-width:850px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.hero h1{max-width:700px}.story img{max-height:520px}.section{padding:60px 0}}
+    @media(max-width:700px){.tabs>.wrap{display:none}.mobile-navigation{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:14px;padding:10px 14px}.mobile-navigation label{font-size:12px;font-weight:800}.mobile-navigation select{width:100%;min-height:46px;border:1px solid #888;border-radius:10px;background:#fff;color:#171717;padding:10px 32px 10px 12px;font:inherit;font-size:15px}.hero{padding:38px 0 42px}.hero h1{font-size:clamp(38px,10.5vw,60px)}.kpi{padding:20px 15px;min-height:170px}.kpi strong{font-size:40px}.kpi b{font-size:11px}.summary p{font-size:21px!important}.table-wrap{padding:8px}.year-phase{box-shadow:none!important}.trend-row{grid-template-columns:76px minmax(0,1fr) 32px}.gallery-card img,.gallery-card:first-of-type img{max-height:620px}.gallery-close h3{line-height:1.12}}
+    @media(max-width:360px){.kpis{grid-template-columns:1fr}.mark{font-size:23px}.logo{gap:4px}.language-switch button{padding:6px 7px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+    @media print{.tabs,.brand-actions,.skip-link,.video-shell,.story-link{display:none!important}.panel{display:block!important}.hero,.section,.month-story{padding:24px 0}.summary,.month-story img,.year-phase{box-shadow:none!important}.story,.kpi,.gallery-card{break-inside:avoid}.gallery-card img{max-height:360px}.wrap{width:100%}}
   </style>
 </head>
 <body data-lang="es">
+  <a class="skip-link" href="#general">Ir al contenido</a>
   <div class="top"><div class="wrap"><span>iERA Colombia · Impact Report</span><span>January–August 2026</span></div></div>
   <header class="wrap brand"><div class="logo"><span class="diamond"><i></i><i></i><i></i><i></i></span><span class="mark">iera</span><span class="country">COLOMBIA <small>INVITANDO AL ISLAM</small></span></div><div class="brand-actions"><div class="language-switch" role="group" aria-label="Language / Idioma"><button type="button" data-language="es" aria-pressed="true">Español</button><button type="button" data-language="en" aria-pressed="false">English</button></div></div></header>
   <nav class="tabs" aria-label="Report periods"><div class="wrap"><button class="tab" data-target="general" aria-selected="true">General · Jun–Aug</button><button class="tab" data-target="year" aria-selected="false">Year development / Desarrollo del año</button><button class="tab" data-target="june" aria-selected="false">June · Junio</button><button class="tab" data-target="july" aria-selected="false">July · Julio</button><button class="tab" data-target="august" aria-selected="false">August · Agosto</button><button class="tab" data-target="stories" aria-selected="false">Stories · Historias</button><button class="tab" data-target="gallery" aria-selected="false">Gallery · Galería</button></div></nav>
@@ -61,7 +75,43 @@
   <footer class="footer"><div class="wrap"><div class="flag">🇨🇴</div><strong>iERA Colombia · Invitando al Islam</strong><p>Mock for content, structure and visual direction review · Not for publication</p></div></footer>
   <script>
     const tabs=[...document.querySelectorAll('.tab')], panels=[...document.querySelectorAll('.panel')];
-    tabs.forEach(tab=>tab.addEventListener('click',()=>{tabs.forEach(t=>t.setAttribute('aria-selected','false'));panels.forEach(p=>p.classList.remove('active'));tab.setAttribute('aria-selected','true');document.getElementById(tab.dataset.target).classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}));
+    const navigation=document.querySelector('.tabs');
+    navigation.firstElementChild.setAttribute('role','tablist');
+    navigation.insertAdjacentHTML('beforeend','<div class="mobile-navigation"><label for="report-section">Explorar</label><select id="report-section"></select></div>');
+    const mobileSelect=document.getElementById('report-section');
+    const prefersReducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
+    tabs.forEach(tab=>{
+      tab.id=`tab-${tab.dataset.target}`;tab.type='button';tab.setAttribute('role','tab');tab.setAttribute('aria-controls',tab.dataset.target);
+      const panel=document.getElementById(tab.dataset.target);panel.setAttribute('role','tabpanel');panel.setAttribute('aria-labelledby',tab.id);panel.tabIndex=0;
+      mobileSelect.add(new Option(tab.textContent,tab.dataset.target));
+    });
+    const activatePanel=(id,{updateUrl=true,scroll=true,focus=false}={})=>{
+      const target=document.getElementById(id);if(!panels.includes(target))return;
+      tabs.forEach(tab=>{const selected=tab.dataset.target===id;tab.setAttribute('aria-selected',String(selected));tab.tabIndex=selected?0:-1});
+      panels.forEach(panel=>{const active=panel===target;panel.classList.toggle('active',active);panel.hidden=!active;if(!active)panel.querySelectorAll('video').forEach(video=>video.pause())});
+      mobileSelect.value=id;document.querySelector('.skip-link').href=`#${id}`;
+      if(updateUrl&&location.hash!==`#${id}`){try{history.pushState(null,'',`#${id}`)}catch{}}
+      if(focus)target.focus({preventScroll:true});
+      if(scroll)window.scrollTo({top:Math.max(0,navigation.offsetTop),behavior:prefersReducedMotion.matches?'instant':'smooth'});
+    };
+    tabs.forEach((tab,index)=>{
+      tab.addEventListener('click',()=>activatePanel(tab.dataset.target));
+      tab.addEventListener('keydown',event=>{
+        const next=event.key==='ArrowRight'?(index+1)%tabs.length:event.key==='ArrowLeft'?(index-1+tabs.length)%tabs.length:event.key==='Home'?0:event.key==='End'?tabs.length-1:null;
+        if(next!==null){event.preventDefault();tabs[next].focus();activatePanel(tabs[next].dataset.target,{scroll:false})}
+      });
+    });
+    mobileSelect.addEventListener('change',()=>activatePanel(mobileSelect.value));
+    window.addEventListener('hashchange',()=>activatePanel(location.hash.slice(1)||'general',{updateUrl:false}));
+    document.querySelector('.skip-link').addEventListener('click',event=>{event.preventDefault();document.getElementById(mobileSelect.value).focus()});
+    document.querySelectorAll('#stories .story-body').forEach((body,index)=>{
+      const id=['june','july','august'][index];
+      const link=document.createElement('a');link.href=`#${id}`;link.className='story-link';link.textContent='Read full story / Leer historia completa';
+      link.addEventListener('click',event=>{event.preventDefault();activatePanel(id,{focus:true,scroll:false});document.querySelector(`#${id} .month-story`).scrollIntoView({behavior:prefersReducedMotion.matches?'instant':'smooth',block:'start'})});body.append(link);
+    });
+    document.querySelectorAll('.table-wrap').forEach(wrapper=>{wrapper.tabIndex=0;wrapper.setAttribute('role','region');wrapper.setAttribute('aria-label','Resultados mensuales');wrapper.insertAdjacentHTML('afterbegin','<p class="table-hint">En pantallas pequeñas, deslice para ver todas las columnas.</p>');const caption=wrapper.querySelector('table').createCaption();caption.textContent='Resultados · Junio–agosto de 2026';wrapper.querySelectorAll('thead th').forEach(th=>th.scope='col')});
+    document.querySelectorAll('video').forEach(video=>{video.playsInline=true;video.setAttribute('aria-label','Resumen audiovisual de Colombia')});
+    document.querySelectorAll('img').forEach(image=>{image.loading='lazy';image.decoding='async'});
     const gallery=[
       ['21','Resources arrive','Llegan los recursos','Foundation','Base','Qur’ans and explanatory material make sustained outreach possible.','Los Coranes y materiales explicativos hacen posible una labor constante.'],
       ['02','Meeting people where they are','Encontrar a las personas donde están','Street presence','Presencia en calle','The work moves into everyday public spaces.','El trabajo llega a los espacios públicos de la vida cotidiana.'],
@@ -117,13 +167,553 @@
       [document.querySelector('#august .month-story h2'),'Fabián was seeking guidance.','Fabián buscaba orientación.'],
       [document.querySelector('.donation-marker'),'6 JUNE 2026<br>DONATION BEGINS','6 DE JUNIO DE 2026<br>INICIA LA DONACIÓN']
     ];
+    // Explicit bilingual content pairs; switching language never splits arbitrary text.
+    const editorialPairs = [
+      [
+        "Year development / Desarrollo del año",
+        [
+          "Year development",
+          "Desarrollo del año"
+        ]
+      ],
+      [
+        "Colombia · January–August 2026 / Colombia · Enero–agosto de 2026",
+        [
+          "Colombia · January–August 2026",
+          "Colombia · Enero–agosto de 2026"
+        ]
+      ],
+      [
+        "January–May / Enero–mayo",
+        [
+          "January–May",
+          "Enero–mayo"
+        ]
+      ],
+      [
+        "June 6 / 6 de junio",
+        [
+          "June 6",
+          "6 de junio"
+        ]
+      ],
+      [
+        "June–August / Junio–agosto",
+        [
+          "June–August",
+          "Junio–agosto"
+        ]
+      ],
+      [
+        "A measured change in reach, activity and continuity. / Un cambio medible en alcance, actividad y continuidad.",
+        [
+          "A measured change in reach, activity and continuity.",
+          "Un cambio medible en alcance, actividad y continuidad."
+        ]
+      ],
+      [
+        "June–August verified totals. / Totales verificados junio–agosto.",
+        [
+          "June–August verified totals.",
+          "Totales verificados junio–agosto."
+        ]
+      ],
+      [
+        "Only additive indicators are accumulated. NMS remains separated by month. / Solo se acumulan indicadores sumables. NMS permanece separado por mes.",
+        [
+          "Only additive indicators are accumulated. NMS remains separated by month.",
+          "Solo se acumulan indicadores sumables. NMS permanece separado por mes."
+        ]
+      ],
+      [
+        "9 + 24 + 31 logged / registradas",
+        [
+          "9 + 24 + 31 logged",
+          "registradas"
+        ]
+      ],
+      [
+        "Attribution boundary / Límite de atribución:",
+        [
+          "Attribution boundary",
+          "Límite de atribución:"
+        ]
+      ],
+      [
+        "the donation began on 6 June, but the June PDF covers the complete month and cannot isolate 1–5 June. Results are therefore described as observed development, not proof that funding alone caused the change. / La donación comenzó el 6 de junio, pero el PDF de junio cubre el mes completo y no permite separar los días 1–5. Por ello, los resultados se presentan como desarrollo observado, no como prueba de que la financiación por sí sola causó el cambio.",
+        [
+          "the donation began on 6 June, but the June PDF covers the complete month and cannot isolate 1–5 June. Results are therefore described as observed development, not proof that funding alone caused the change.",
+          "La donación comenzó el 6 de junio, pero el PDF de junio cubre el mes completo y no permite separar los días 1–5. Por ello, los resultados se presentan como desarrollo observado, no como prueba de que la financiación por sí sola causó el cambio."
+        ]
+      ],
+      [
+        "June–August bilingual recap / Recapitulación bilingüe junio–agosto.",
+        [
+          "June–August bilingual recap",
+          "Recapitulación bilingüe junio–agosto."
+        ]
+      ],
+      [
+        "Three paths, one invitation. / Tres caminos, una invitación.",
+        [
+          "Three paths, one invitation.",
+          "Tres caminos, una invitación."
+        ]
+      ],
+      [
+        "The supplied stories add the human layer that the operational reports currently leave blank. / Las historias aportan la dimensión humana que los reportes operativos no desarrollan.",
+        [
+          "The supplied stories add the human layer that the operational reports currently leave blank.",
+          "Las historias aportan la dimensión humana que los reportes operativos no desarrollan."
+        ]
+      ],
+      [
+        "Colombia · Clarity / Claridad",
+        [
+          "Colombia · Clarity",
+          "Claridad"
+        ]
+      ],
+      [
+        "Bryan found a path back to God. / Bryan encontró el camino de regreso a Dios.",
+        [
+          "Bryan found a path back to God.",
+          "Bryan encontró el camino de regreso a Dios."
+        ]
+      ],
+      [
+        "Language studies led Bryan to Muslim friends and, later, to the Qur’an and the mosque. / El estudio de idiomas acercó a Bryan a amigos musulmanes y, después, al Corán y a la mezquita.",
+        [
+          "Language studies led Bryan to Muslim friends and, later, to the Qur’an and the mosque.",
+          "El estudio de idiomas acercó a Bryan a amigos musulmanes y, después, al Corán y a la mezquita."
+        ]
+      ],
+      [
+        "Read / Leer",
+        [
+          "Read",
+          "Leer"
+        ]
+      ],
+      [
+        "He chose the shahada to recognise Allah alone and pursue a peaceful life. / Eligió la shahada para reconocer únicamente a Allah y buscar una vida en paz.",
+        [
+          "He chose the shahada to recognise Allah alone and pursue a peaceful life.",
+          "Eligió la shahada para reconocer únicamente a Allah y buscar una vida en paz."
+        ]
+      ],
+      [
+        "Colombia · Peace / Paz",
+        [
+          "Colombia · Peace",
+          "Paz"
+        ]
+      ],
+      [
+        "The Qur’an brought peace back to Maryam. / El Corán devolvió la paz a Maryam.",
+        [
+          "The Qur’an brought peace back to Maryam.",
+          "El Corán devolvió la paz a Maryam."
+        ]
+      ],
+      [
+        "After distance from faith, hearing the Qur’an brought her a calm she had never experienced. / Tras alejarse de la fe, escuchar el Corán le dio una calma que nunca había sentido.",
+        [
+          "After distance from faith, hearing the Qur’an brought her a calm she had never experienced.",
+          "Tras alejarse de la fe, escuchar el Corán le dio una calma que nunca había sentido."
+        ]
+      ],
+      [
+        "Her shahada followed study and sincere connection. / Su shahada fue fruto del estudio y de una conexión sincera.",
+        [
+          "Her shahada followed study and sincere connection.",
+          "Su shahada fue fruto del estudio y de una conexión sincera."
+        ]
+      ],
+      [
+        "Colombia · Guidance / Orientación",
+        [
+          "Colombia · Guidance",
+          "Orientación"
+        ]
+      ],
+      [
+        "Fabián was seeking guidance. / Fabián buscaba orientación.",
+        [
+          "Fabián was seeking guidance.",
+          "Fabián buscaba orientación."
+        ]
+      ],
+      [
+        "Al-Fatiha and the opening of Al-Baqarah gave him the guidance he sought. / Al-Fatiha y el inicio de Al-Baqarah le dieron la orientación que buscaba.",
+        [
+          "Al-Fatiha and the opening of Al-Baqarah gave him the guidance he sought.",
+          "Al-Fatiha y el inicio de Al-Baqarah le dieron la orientación que buscaba."
+        ]
+      ],
+      [
+        "He now hopes to learn Qur’anic Arabic. His word for Islam’s impact: awareness. / Ahora desea aprender árabe coránico. Su palabra para el impacto del Islam: conciencia.",
+        [
+          "He now hopes to learn Qur’anic Arabic. His word for Islam’s impact: awareness.",
+          "Ahora desea aprender árabe coránico. Su palabra para el impacto del Islam: conciencia."
+        ]
+      ],
+      [
+        "What is still missing. / Información aún pendiente.",
+        [
+          "What is still missing.",
+          "Información aún pendiente."
+        ]
+      ],
+      [
+        "The January–August monthly series is now complete. Remaining items concern documentation and publication approval. / La serie mensual enero–agosto ya está completa. Los pendientes restantes corresponden a documentación y aprobación de publicación.",
+        [
+          "The January–August monthly series is now complete. Remaining items concern documentation and publication approval.",
+          "La serie mensual enero–agosto ya está completa. Los pendientes restantes corresponden a documentación y aprobación de publicación."
+        ]
+      ],
+      [
+        "Complete: January–August 2026. / Completa: enero–agosto de 2026.",
+        [
+          "Complete: January–August 2026.",
+          "Completa: enero–agosto de 2026."
+        ]
+      ],
+      [
+        "Needed only to separate 1–5 June from the donor-funded period beginning 6 June. / Solo se necesita para separar los días 1–5 del periodo financiado iniciado el 6.",
+        [
+          "Needed only to separate 1–5 June from the donor-funded period beginning 6 June.",
+          "Solo se necesita para separar los días 1–5 del periodo financiado iniciado el 6."
+        ]
+      ],
+      [
+        "Dates, types and exact locations for selected examples. / Fechas, tipos y lugares exactos de los ejemplos seleccionados.",
+        [
+          "Dates, types and exact locations for selected examples.",
+          "Fechas, tipos y lugares exactos de los ejemplos seleccionados."
+        ]
+      ],
+      [
+        "Consent, preferred names, city and shahada date. / Consentimiento, nombres preferidos, ciudad y fecha de shahada.",
+        [
+          "Consent, preferred names, city and shahada date.",
+          "Consentimiento, nombres preferidos, ciudad y fecha de shahada."
+        ]
+      ],
+      [
+        "Director name/title, contact, report number and confidentiality wording. / Nombre y cargo del director, contacto, número de reporte y texto de confidencialidad.",
+        [
+          "Director name/title, contact, report number and confidentiality wording.",
+          "Nombre y cargo del director, contacto, número de reporte y texto de confidencialidad."
+        ]
+      ],
+      [
+        "Confirm whether to include invoices, currencies and budget allocation. / Confirmar si se incluyen facturas, monedas y distribución presupuestal.",
+        [
+          "Confirm whether to include invoices, currencies and budget allocation.",
+          "Confirmar si se incluyen facturas, monedas y distribución presupuestal."
+        ]
+      ],
+      [
+        "Month, city, activity and photographer are not verified by every filename. / No todos los nombres verifican mes, ciudad, actividad y fotógrafo.",
+        [
+          "Month, city, activity and photographer are not verified by every filename.",
+          "No todos los nombres verifican mes, ciudad, actividad y fotógrafo."
+        ]
+      ],
+      [
+        "Bilingual interactive web report, ten-photo narrative gallery and video. / Reporte web bilingüe e interactivo, galería narrativa de diez fotos y video.",
+        [
+          "Bilingual interactive web report, ten-photo narrative gallery and video.",
+          "Reporte web bilingüe e interactivo, galería narrativa de diez fotos y video."
+        ]
+      ],
+      [
+        "Investment timeline / Línea de inversión",
+        [
+          "Investment timeline",
+          "Línea de inversión"
+        ]
+      ],
+      [
+        "Baseline / Línea base",
+        [
+          "Baseline",
+          "Línea base"
+        ]
+      ],
+      [
+        "Transition + funded window / Transición + periodo financiado",
+        [
+          "Transition + funded window",
+          "Transición + periodo financiado"
+        ]
+      ],
+      [
+        "Observed monthly-average change / Cambio observado en el promedio mensual",
+        [
+          "Observed monthly-average change",
+          "Cambio observado en el promedio mensual"
+        ]
+      ],
+      [
+        "Reading the change / Lectura del cambio:",
+        [
+          "Reading the change",
+          "Lectura del cambio:"
+        ]
+      ],
+      [
+        "reach expanded most sharply after the donation start, while activity volume and shahadas also improved on a monthly-average basis. June cannot be divided at day 6, so this is a temporal comparison and not proof that funding alone caused every result. / El alcance creció con mayor fuerza después del inicio de la donación, mientras el volumen de actividades y las shahadas también mejoraron en promedio mensual. Junio no puede dividirse en el día 6; por eso esta es una comparación temporal y no una prueba de que la financiación por sí sola causó todos los resultados.",
+        [
+          "reach expanded most sharply after the donation start, while activity volume and shahadas also improved on a monthly-average basis. June cannot be divided at day 6, so this is a temporal comparison and not proof that funding alone caused every result.",
+          "El alcance creció con mayor fuerza después del inicio de la donación, mientras el volumen de actividades y las shahadas también mejoraron en promedio mensual. Junio no puede dividirse en el día 6; por eso esta es una comparación temporal y no una prueba de que la financiación por sí sola causó todos los resultados."
+        ]
+      ],
+      [
+        "January / Enero",
+        [
+          "January",
+          "Enero"
+        ]
+      ],
+      [
+        "February / Febrero",
+        [
+          "February",
+          "Febrero"
+        ]
+      ],
+      [
+        "March / Marzo",
+        [
+          "March",
+          "Marzo"
+        ]
+      ],
+      [
+        "April / Abril",
+        [
+          "April",
+          "Abril"
+        ]
+      ],
+      [
+        "May / Mayo",
+        [
+          "May",
+          "Mayo"
+        ]
+      ],
+      [
+        "June / Junio",
+        [
+          "June",
+          "Junio"
+        ]
+      ],
+      [
+        "July / Julio",
+        [
+          "July",
+          "Julio"
+        ]
+      ],
+      [
+        "August / Agosto",
+        [
+          "August",
+          "Agosto"
+        ]
+      ],
+      [
+        "Monthly dawah activities recovered from 9 in the June transition to 24 in July and 31 in August. / Las actividades mensuales de dawah se recuperaron de 9 en la transición de junio a 24 en julio y 31 en agosto.",
+        [
+          "Monthly dawah activities recovered from 9 in the June transition to 24 in July and 31 in August.",
+          "Las actividades mensuales de dawah se recuperaron de 9 en la transición de junio a 24 en julio y 31 en agosto."
+        ]
+      ],
+      [
+        "47.1% below / por debajo",
+        [
+          "47.1% below",
+          "por debajo"
+        ]
+      ],
+      [
+        "54.5% below / por debajo",
+        [
+          "54.5% below",
+          "por debajo"
+        ]
+      ],
+      [
+        "400% above June / sobre junio",
+        [
+          "400% above June",
+          "sobre junio"
+        ]
+      ],
+      [
+        "166.7% above / por encima",
+        [
+          "166.7% above",
+          "por encima"
+        ]
+      ],
+      [
+        "2,000% above / por encima",
+        [
+          "2,000% above",
+          "por encima"
+        ]
+      ],
+      [
+        "Requires confirmation / Requiere confirmación",
+        [
+          "Requires confirmation",
+          "Requiere confirmación"
+        ]
+      ],
+      [
+        "20% below July / bajo julio",
+        [
+          "20% below July",
+          "bajo julio"
+        ]
+      ],
+      [
+        "29.2% above July / sobre julio",
+        [
+          "29.2% above July",
+          "sobre julio"
+        ]
+      ],
+      [
+        "21.9% below / por debajo",
+        [
+          "21.9% below",
+          "por debajo"
+        ]
+      ],
+      [
+        "Donor impact story / Historia de impacto para donantes",
+        [
+          "Donor impact story",
+          "Historia de impacto para donantes"
+        ]
+      ],
+      [
+        "Your contribution, seen in motion. / Su aporte, convertido en acción.",
+        [
+          "Your contribution, seen in motion.",
+          "Su aporte, convertido en acción."
+        ]
+      ],
+      [
+        "Equip / Equipar",
+        [
+          "Equip",
+          "Equipar"
+        ]
+      ],
+      [
+        "Materials and people prepared for action. / Materiales y personas preparados para actuar.",
+        [
+          "Materials and people prepared for action.",
+          "Materiales y personas preparados para actuar."
+        ]
+      ],
+      [
+        "Reach / Alcanzar",
+        [
+          "Reach",
+          "Alcanzar"
+        ]
+      ],
+      [
+        "64 activities and 192 people reached in June–August. / 64 actividades y 192 personas alcanzadas entre junio y agosto.",
+        [
+          "64 activities and 192 people reached in June–August.",
+          "64 actividades y 192 personas alcanzadas entre junio y agosto."
+        ]
+      ],
+      [
+        "Accompany / Acompañar",
+        [
+          "Accompany",
+          "Acompañar"
+        ]
+      ],
+      [
+        "From first contact to community, shahada and follow-up. / Del primer contacto a la comunidad, la shahada y el seguimiento.",
+        [
+          "From first contact to community, shahada and follow-up.",
+          "Del primer contacto a la comunidad, la shahada y el seguimiento."
+        ]
+      ],
+      [
+        "Evidence note / Nota de evidencia:",
+        [
+          "Evidence note",
+          "Nota de evidencia:"
+        ]
+      ],
+      [
+        "this sequence illustrates the development observed after funding began; the reports do not allocate each photograph or result to a specific donor expense. / Esta secuencia ilustra el desarrollo observado después del inicio de la financiación; los reportes no asignan cada fotografía o resultado a un gasto específico del donante.",
+        [
+          "this sequence illustrates the development observed after funding began; the reports do not allocate each photograph or result to a specific donor expense.",
+          "Esta secuencia ilustra el desarrollo observado después del inicio de la financiación; los reportes no asignan cada fotografía o resultado a un gasto específico del donante."
+        ]
+      ]
+    ];
+    editorialPairs.forEach(([source,pair])=>{if(!textPairs.has(source))textPairs.set(source,pair)});
     const specialElements=new Set(specialCopies.map(x=>x[0]));
-    const translateText=(source,lang)=>{if(textPairs.has(source))return textPairs.get(source)[lang==='en'?0:1];if(source.includes(' / ')){const cut=source.indexOf(' / ');return lang==='en'?source.slice(0,cut):source.slice(cut+3)}return source};
-    const applyLanguage=(lang)=>{document.body.dataset.lang=lang;document.documentElement.lang=lang;localStorage.setItem('iera-colombia-language',lang);document.querySelectorAll('.language-switch button').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.language===lang)));specialCopies.forEach(([element,en,es])=>{if(element)element.innerHTML=lang==='en'?en:es});const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let node;while(node=walker.nextNode()){if(!node.parentElement||node.parentElement.closest('.bilingual,.language-switch,#gallery-grid')||[...specialElements].some(el=>el&&el.contains(node))||node.parentElement.closest('.summary p,.year-phase.after p'))continue;if(node._sourceText===undefined)node._sourceText=node.nodeValue;const raw=node._sourceText,key=raw.trim();if(!key)continue;const translated=translateText(key,lang);node.nodeValue=raw.slice(0,raw.indexOf(key))+translated+raw.slice(raw.indexOf(key)+key.length)}renderGallery()};
-    const activateLanguage=(lang)=>{applyLanguage(lang);document.title=lang==='en'?'iERA Colombia — Donor Impact Report — January to August 2026':'iERA Colombia — Informe de impacto — Enero a agosto de 2026'};
+    textPairs.set('Read full story / Leer historia completa',['Read full story','Leer historia completa']);
+    textPairs.set('INVITANDO AL ISLAM',['INVITING TO ISLAM','INVITANDO AL ISLAM']);
+    const translateText=(source,lang)=>textPairs.has(source)?textPairs.get(source)[lang==='en'?0:1]:source;
+    const applyLanguage=(lang)=>{
+      lang=lang==='en'?'en':'es';document.body.dataset.lang=lang;document.documentElement.lang=lang;
+      try{localStorage.setItem('iera-colombia-language',lang)}catch{}
+      document.querySelectorAll('.language-switch button').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.language===lang)));
+      specialCopies.forEach(([element,en,es])=>{if(element)element.innerHTML=lang==='en'?en:es});
+      const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let node;
+      while(node=walker.nextNode()){
+        if(!node.parentElement||node.parentElement.closest('script,style,.bilingual,.language-switch,#gallery-grid,.mobile-navigation,.table-hint,caption,.skip-link,.video-shell p')||[...specialElements].some(el=>el&&el.contains(node))||node.parentElement.closest('.summary p,.year-phase p'))continue;
+        if(node._sourceText===undefined)node._sourceText=node.nodeValue;
+        const raw=node._sourceText,key=raw.trim();if(!key)continue;
+        node.nodeValue=raw.slice(0,raw.indexOf(key))+translateText(key,lang)+raw.slice(raw.indexOf(key)+key.length);
+      }
+      const english=lang==='en';
+      navigation.setAttribute('aria-label',english?'Explore the report':'Explorar el informe');navigation.firstElementChild.setAttribute('aria-label',english?'Report sections':'Secciones del informe');
+      document.querySelector('.mobile-navigation label').textContent=english?'Explore':'Explorar';
+      tabs.forEach((tab,index)=>mobileSelect.options[index].textContent=tab.textContent);
+      document.querySelector('.skip-link').textContent=english?'Skip to content':'Ir al contenido';
+      document.querySelectorAll('.table-wrap').forEach(wrapper=>{wrapper.setAttribute('aria-label',english?'Monthly results':'Resultados mensuales');wrapper.querySelector('caption').textContent=english?'Results · June–August 2026':'Resultados · Junio–agosto de 2026';wrapper.querySelector('.table-hint').textContent=english?'On small screens, swipe to see all columns.':'En pantallas pequeñas, deslice para ver todas las columnas.'});
+      document.querySelector('.trend-bars').setAttribute('aria-label',english?'Dawah activities by month':'Actividades de dawah por mes');
+      document.querySelectorAll('video').forEach(video=>video.setAttribute('aria-label',english?'Colombia video recap, Spanish and English':'Resumen audiovisual de Colombia, español e inglés'));
+      document.querySelector('.video-shell p').textContent=english?'Video recap · June–August 2026 · ES / EN':'Resumen en video · Junio–agosto de 2026 · ES / EN';
+      document.querySelectorAll('img:not(#gallery-grid img)').forEach(image=>{const name=image.src.includes('bryan')?'Bryan':image.src.includes('maryam')?'Maryam':'Fabián';image.alt=english?`${name} · story illustration`:`${name} · ilustración de su historia`});
+      renderGallery();
+    };
+    const activateLanguage=(lang,{updateUrl=true}={})=>{
+      lang=lang==='en'?'en':'es';applyLanguage(lang);
+      document.title=lang==='en'?'iERA Colombia — Donor Impact Report — January to August 2026':'iERA Colombia — Informe de impacto — Enero a agosto de 2026';
+      if(updateUrl){const url=new URL(location.href);url.searchParams.set('lang',lang);try{history.replaceState(null,'',url)}catch{}}
+    };
     document.querySelectorAll('.language-switch button').forEach(button=>button.addEventListener('click',()=>activateLanguage(button.dataset.language)));
     const requestedLanguage=new URLSearchParams(window.location.search).get('lang');
-    activateLanguage(requestedLanguage==='en'||requestedLanguage==='es'?requestedLanguage:(localStorage.getItem('iera-colombia-language')||'es'));
+    let savedLanguage='es';try{savedLanguage=localStorage.getItem('iera-colombia-language')||'es'}catch{}
+    const initialLanguage=requestedLanguage==='en'||requestedLanguage==='es'?requestedLanguage:(savedLanguage==='en'?'en':'es');
+    activateLanguage(initialLanguage,{updateUrl:false});
+    const initialPanel=panels.some(panel=>panel.id===location.hash.slice(1))?location.hash.slice(1):'general';
+    activatePanel(initialPanel,{updateUrl:false,scroll:false});
+    window.addEventListener('popstate',()=>{
+      const lang=new URLSearchParams(location.search).get('lang');
+      activateLanguage(lang==='en'||lang==='es'?lang:initialLanguage,{updateUrl:false});
+      const id=panels.some(panel=>panel.id===location.hash.slice(1))?location.hash.slice(1):'general';
+      activatePanel(id,{updateUrl:false,scroll:false});
+    });
   </script>
 </body>
 </html>
